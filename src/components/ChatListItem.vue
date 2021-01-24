@@ -10,7 +10,8 @@
     props: ['chat'],
     methods: {
       itemClick() {
-        bus.$emit('CHAT_CLICK', {...this.chat});
+        //this.$store.commit('readChat', {...this.chat}); // store에 commit 메시지로 mutation 실행 첫번째 파라미터는 실행할 뮤테이션 명
+        this.$store.dispatch('readChat', {...this.chat}); // mutation은 위에처럼 commit으로 실행시켰다면 action은 dispatch로 실행
       }
     }
   }
