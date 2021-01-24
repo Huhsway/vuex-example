@@ -61,6 +61,9 @@ export default {
   components: {
     Header,
     ChatList
+  },
+  mounted() {
+    console.log(this.$store) // 컴포넌트가 화면에 뿌려준 뒤 실행되는 mounted 메소드에서 스토어에 접근이 잘 되는지 출력
   }
 }
 </script>
